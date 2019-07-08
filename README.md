@@ -3,7 +3,7 @@ Rest API by using golang and deploy with Docker.
 It's just an prototype how the go application will build, run and deploy by using docker
 ### Build
 ```ssh
-$ docker run --rm -p 8080:8080 go-docker:v1.0
+$ docker build -t go-docker:v1.0 .
 ```
 ### Run
 
