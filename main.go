@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -18,5 +19,6 @@ func main() {
 }
 
 func welcome(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Welcome to Golang & Docker demo application")
+	str := fmt.Sprintf("%s%d%s\n", "Welcome to Golang & Docker demo application. \n Application is running at ", os.Getegid(), " process ID.")
+	fmt.Fprintln(w, str)
 }
